@@ -1,10 +1,12 @@
 
 def fib(n):
+    """Форирование последовательности Фибоначи"""
     if n in [1, 2]:
         return 1
     else:
         return fib(n-1) + fib(n-2)
 def sign_change (array):
+    """Смена знака в развернутом массиве и удаление последнего элемента"""
     result_array=[]
     for i in range (len(array)):
         result_array.append(-1*array[i])
@@ -17,9 +19,7 @@ for e in range(number+1):
         list.append(0)
     else:
         list.append(fib(e))
-
 list1 = list.copy()
 list.reverse()
 list = sign_change(list)
 print(list + list1)
-#print(list)

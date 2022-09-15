@@ -5,7 +5,6 @@ def dec_to_bin (number):
         dec_to_bin(number//2)
     else:
         bin_number.reverse()
-        
         return print(''.join(map(str,bin_number)))
 
 n = int(input('Введите дестичное число дла перевода в двоичную систему: '))
