@@ -1,25 +1,15 @@
-
-def fib(n):
-    if n in [1, 2]:
-        return 1
+bin_number =[]
+def dec_to_bin (number):
+    if number > 0:
+        bin_number.append(number%2)
+        dec_to_bin(number//2)
     else:
-        return fib(n-1) + fib(n-2)
-def sign_change (array):
-    result_array=[]
-    for i in range (len(array)):
-        result_array.append(-1*array[i])
-    result_array.pop()
-    return result_array
-number = int(input('Введите индекс '))
-list = []
-for e in range(number+1):
-    if e == 0:
-        list.append(0)
-    else:
-        list.append(fib(e))
+        bin_number.reverse()
+        
+        return print(''.join(map(str,bin_number)))
 
-list1 = list.copy()
-list.reverse()
-list = sign_change(list)
-print(list + list1)
-#print(list)
+n = int(input('Введите дестичное число дла перевода в двоичную систему: '))
+print('Результат перевода:')
+dec_to_bin(n)
+
+
