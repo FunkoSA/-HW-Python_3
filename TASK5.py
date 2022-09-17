@@ -1,15 +1,18 @@
 
 def fib(n):
-    """Форирование последовательности Фибоначи"""
+    '''Форирование последовательности Фибоначи'''
     if n in [1, 2]:
         return 1
     else:
         return fib(n-1) + fib(n-2)
 def sign_change (array):
-    """Смена знака в развернутом массиве и удаление последнего элемента"""
+    '''Смена знака в развернутом массиве и удаление последнего элемента'''
     result_array=[]
     for i in range (len(array)):
-        result_array.append(-1*array[i])
+        if i %2 == 0:
+            result_array.append(-1*array[i])
+        else:
+            result_array.append(array[i])
     result_array.pop()
     return result_array
 number = int(input('Введите индекс '))

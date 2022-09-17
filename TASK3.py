@@ -19,5 +19,5 @@ def diff_max_min (array_for_diff):
 
 spisok = [1.1, 1.2, 3.1, 5.17, 10.02]
 print(diff_max_min(array_prepare(spisok)))
-spisok = [4.07, 5.1, 8.2444, 6.98]
+spisok = [4.07, 5.1, 8.2444, 6.9844]
 print(diff_max_min(array_prepare(spisok)))
