@@ -3,7 +3,7 @@ def array_prepare (array):
     """Функция подготовки массива дробных частей исходного массива"""
     prepared_array = []
     for i in range (len(array)):
-        prepared_array.append(round(array[i]%1,4))
+        prepared_array.append(round(array[i]%1,15))
     return prepared_array
 def diff_max_min (array_for_diff):
     """Функция нахождения разницы меджу максимальным и минимальным значением элементов массива"""
@@ -19,5 +19,5 @@ def diff_max_min (array_for_diff):
 
 spisok = [1.1, 1.2, 3.1, 5.17, 10.02]
 print(diff_max_min(array_prepare(spisok)))
-spisok = [4.07, 5.1, 8.2444, 6.9844]
+spisok = [4.07, 5.1, 8.2444, 6.98]
 print(diff_max_min(array_prepare(spisok)))
